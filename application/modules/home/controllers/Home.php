@@ -11,9 +11,9 @@ class Home extends MY_Controller
     function index()
     {
         $data['title'] = "Home Page";
-        $data['content_view'] = "Home Page";
+        $data['content_view'] = "home_v";
 
-        $this->twig->display('home_v', $data);
+        $this->twig->display('base', $data);
     }
 
 

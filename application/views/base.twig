@@ -7,11 +7,11 @@
 </head>
     <body>
 
-        {% block header %}{% endblock %}
+        {% include 'partials/header.twig' %}
 
-        {% block content   %}{% endblock %}
+        {% include content_view ~ '.twig' %}
 
-        {% block footer %}{% endblock %}
+        {% include 'partials/footer.twig' %}
 
         {% block js %}{% endblock %}
 
