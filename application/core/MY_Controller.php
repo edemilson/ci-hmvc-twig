@@ -9,7 +9,7 @@ class MY_Controller extends MX_Controller
 
         $twig_cfg = [
             'paths' => [
-                'temas/' . $this->router->fetch_module() . '/views/',
+                'temas/modules/' . $this->router->fetch_module() . '/',
                 'temas/',
                 VIEWPATH,
                 APPPATH . 'modules/' . $this->router->fetch_module() . '/views/'
@@ -18,6 +18,13 @@ class MY_Controller extends MX_Controller
         ];
 
         $this->load->library('twig', $twig_cfg);
+
+        $twig = $this->twig->getTwig();
+        $function = new \Twig_SimpleFunction('theme_asset', function ($asset) {
+            return base_url() . "/temas/assets/" . $asset;
+        });
+
+        $twig->addFunction($function);
 
     }
 

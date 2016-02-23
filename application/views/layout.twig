@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+
+{% block title %}
+    {{ parent() }} | Site 10
+{% endblock %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ theme_asset('css/meustyle.css') }}" />
+{% endblock %}
+
+{% block content %}
+
+    {% include 'partials/header.twig' %}
+    {% include content_view ~ '.twig' %}
+    {% include 'partials/footer.twig' %}
+
+{% endblock %}
+
+

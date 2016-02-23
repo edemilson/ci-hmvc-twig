@@ -1,0 +1,9 @@
+página de conteudo {{ title }}
+
+<br/>
+<h4>Lista de Clientes</h4>
+<ul>
+{% for user in busca_clientes() %}
+    <li>{{ user.nome }}</li>
+{% endfor %}
+</ul>
