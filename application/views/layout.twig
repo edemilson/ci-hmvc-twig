@@ -17,4 +17,7 @@
 
 {% endblock %}
 
-
+{% block js %}
+    {{ parent() }}
+    <script src="{{ theme_asset('js/meujs.js') }}"></script>
+{% endblock %}

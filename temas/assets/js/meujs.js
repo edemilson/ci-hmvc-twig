@@ -1,0 +1,3 @@
+/**
+ * Meu script de exemplo
+ */
